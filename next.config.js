@@ -1,0 +1,2 @@
+const nextConfig = { images: { domains: ['image.tmdb.org'], unoptimized: true } };
+module.exports = nextConfig;

@@ -1,0 +1,64 @@
+# BEYOND ENTERTAINMENT - Setup Guide
+
+## What's Included
+This zip contains the COMPLETE fixed project with ALL features working:
+
+- ✅ AI Search (TMDB + Uploads)
+- ✅ All 13 navigation tabs (Home, WWE, Wrestling, Featured Channels, Shorts, Quick Access, I Am A Monster, All Comics, Music Videos, Blog, Downloads, SHOWDOWN, About)
+- ✅ No "Movies" or "TV Shows" tabs
+- ✅ SHOWDOWN section with search, filter, download buttons, audio player
+- ✅ SHOWDOWN banner on home page (click → navigates to SHOWDOWN tab)
+- ✅ Download sites: TFPDL, Thenkiri, FZMovies, NaijaPrey
+- ✅ About page: Godfrey Kangwa profile + platform description
+- ✅ Uploaded videos play on home page
+- ✅ Footer with contact info
+- ✅ Github link
+- ✅ TMDB integration (12 categories)
+- ✅ Newsletter signup
+- ✅ NO duplicate functions, NO broken code
+
+## Files Structure
+```
+BEYOND-ENTERTAINMENT/
+├── package.json
+├── next.config.js
+├── tsconfig.json
+├── tailwind.config.ts
+├── postcss.config.js
+├── .gitignore
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx          ← Main file (all sections fixed)
+│   │   ├── globals.css
+│   │   └── api/
+│   │       └── uploads/
+│   │           └── route.ts
+│   └── components/
+│       └── ui/
+│           └── newsletter-signup.tsx
+├── scripts/
+│   └── generate-upload-manifest.js
+└── public/
+    ├── showdown-wallpaper.png  ← ADD YOUR IMAGE HERE
+    └── uploads/
+        ├── movies/manifest.json
+        └── music/manifest.json
+```
+
+## How to Use
+1. Extract this zip into your BEYOND-ENTERTAINMENT project folder (REPLACE all existing files)
+2. Make sure your showdown-wallpaper.png is in the `public/` folder
+3. Make sure your video/audio files are in `public/uploads/movies/` and `public/uploads/music/`
+4. Run: `npm install`
+5. Run: `npm run dev` to test locally
+6. Run: `git add .`
+7. Run: `git commit -m "Fixed all issues - complete rebuild"`
+8. Run: `git push origin main`
+9. Vercel will auto-deploy!
+
+## Important Notes
+- The TMDB API key is included in the code
+- Your video files (Anne-Marie 2002, Kerosene ZOMBIES 4, Alice Merton, My Shot Hamilton, P!nk Just Like Fire) should already be in `public/uploads/movies/`
+- The prebuild script in package.json will auto-generate manifest files from your uploads
+- Wallpapers: Place `showdown-wallpaper.png` in the `public/` folder

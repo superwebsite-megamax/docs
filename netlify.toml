@@ -1,0 +1,9 @@
+[build]
+  command = "bun run build"
+  publish = ".netlify"
+
+[functions]
+  directory = "netlify/functions/"
+
+[build.environment]
+  NODE_ENV = "production"

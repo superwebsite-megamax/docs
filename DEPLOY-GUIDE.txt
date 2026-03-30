@@ -1,0 +1,8 @@
+# DEPLOY GUIDE
+node scripts/cleanup-old-files.js
+Remove-Item -Force package-lock.json
+Remove-Item -Recurse -Force node_modules
+npm install
+git add .
+git commit -m "v2.0 - AI search, 12 partner sites, drama shorts, wrestling tab, audio skip"
+git push origin main

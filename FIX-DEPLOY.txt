@@ -1,0 +1,33 @@
+# ====================================
+# BEYOND ENTERTAINMENT - FIX DEPLOY GUIDE
+# ====================================
+# 
+# PROBLEM: Old shadcn/ui files still in your repo break the build
+# SOLUTION: Run the cleanup script FIRST, then push
+#
+# ====================================
+# STEP-BY-STEP (run each line one at a time in PowerShell):
+# ====================================
+
+# STEP 1: Run the cleanup script (deletes old files)
+node scripts/cleanup-old-files.js
+
+# STEP 2: Delete the old package-lock.json so npm generates a fresh one
+Remove-Item -Force package-lock.json
+
+# STEP 3: Delete old node_modules
+Remove-Item -Recurse -Force node_modules
+
+# STEP 4: Install fresh dependencies
+npm install
+
+# STEP 5: Add everything to git
+git add .
+
+# STEP 6: Commit
+git commit -m "Clean rebuild - removed old shadcn files"
+
+# STEP 7: Push
+git push origin main
+
+# STEP 8: Wait for Vercel to deploy (check vercel.com/dashboard)
